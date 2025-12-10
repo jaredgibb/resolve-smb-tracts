@@ -1,0 +1,34 @@
+{
+  "name": "census-tract-geocoder",
+  "version": "1.0.0",
+  "description": "Geocode addresses to census tracts using official TIGER/Line shapefiles",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --max-old-space-size=16384 dist/index.js",
+    "start:simple": "node --max-old-space-size=16384 dist/indexSimple.js",
+    "dev": "ts-node src/index.ts",
+    "download-shapefiles": "ts-node src/downloadShapefiles.ts",
+    "test-api": "ts-node src/testShapefiles.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/boolean-point-in-polygon": "^7.3.1",
+    "@turf/helpers": "^7.3.1",
+    "csv-parse": "^6.1.0",
+    "kdbush": "^4.0.2",
+    "piscina": "^4.3.0",
+    "rbush": "^4.0.1",
+    "shapefile": "^0.6.6",
+    "unzipper": "^0.12.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/rbush": "^4.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}

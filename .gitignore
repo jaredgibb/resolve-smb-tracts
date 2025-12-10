@@ -1,0 +1,15 @@
+node_modules/
+dist/
+data/census_tracts/
+output/
+logs/
+og/
+data/
+*.log
+.pyc
+__pycache__/
+addresses_gaps.csv
+check_these_again.csv
+.env
+.DS_Store
+output.zip
